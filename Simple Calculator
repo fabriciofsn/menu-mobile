@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator</title>
+</head>
+<body>
+
+    <script>
+
+        var intialNumber = prompt('Infome o número inicial')
+
+        var signal = prompt ('infome o sinal')
+
+        while(signal != '*' && signal != '+' && signal != '/' && signal != '-') {
+            alert('Favor informar um sinal válido')
+            var signal = prompt ('infome o sinal')
+        }
+        
+        var finalNumber = prompt ('informe o número final')
+
+       intialNumber = parseInt(intialNumber)
+       finalNumber = parseInt(finalNumber)
+
+       var finalResultad = 0; 
+
+        if(signal == '-'){
+           finalResultad =  intialNumber - finalNumber
+        }else if(signal == '+'){
+            finalResultad = intialNumber + finalNumber
+        }else if(signal == '/'){
+            finalResultad = intialNumber / finalNumber
+        }else if(signal == '*'){
+            finalResultad = intialNumber * finalNumber
+        }
+
+        alert('o resultado final é '+finalResultad)
+
+    </script>
+    
+</body>
+</html>
